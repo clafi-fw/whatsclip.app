@@ -1,0 +1,119 @@
+/* Drawn stand-ins for screenshots, used by illustrations.js until a panel carries real images.
+   Sizes are in em of a font tied to the scene's width, so a drawing scales as a picture would. */
+
+.win {
+    --wh: 234;
+    --wsat: 8%;
+    --w-title: hsl(var(--wh) var(--wsat) 86%);
+    --w-strip: hsl(var(--wh) var(--wsat) 87%);
+    --w-page: hsl(var(--wh) var(--wsat) 97.5%);
+    --w-ink: hsl(var(--wh) 10% 13%);
+    --w-muted: hsl(var(--wh) 6% 47%);
+    --w-div: hsl(var(--wh) var(--wsat) 72%);
+    --w-edge: hsl(var(--wh) var(--wsat) 76%);
+    --w-chip: hsl(var(--wh) var(--wsat) 91%);
+    --w-acc: hsl(calc(var(--wh) + 6) 72% 56%);
+    --w-spot: #d4691a;
+    --k: #3b4fd8; --t: #16858a; --s: #b4571b; --c: #7d8292; --n: #8a4fc4; --f: #7a5b12;
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; overflow: hidden;
+    border-radius: calc(var(--ws, 1.55) * .55cqw);
+    font: calc(var(--ws, 1.55) * 1cqw)/1.35 "Segoe UI", system-ui, sans-serif;
+    color: var(--w-ink); background: var(--w-page); text-align: left;
+    box-shadow: 0 0 0 1px var(--w-edge), 0 .4em 1.6em rgba(10, 14, 30, .16);
+}
+.win.d {
+    --w-title: hsl(var(--wh) var(--wsat) 15%);
+    --w-strip: hsl(var(--wh) var(--wsat) 15%);
+    --w-page: hsl(var(--wh) var(--wsat) 10.5%);
+    --w-ink: hsl(var(--wh) 10% 90%);
+    --w-muted: hsl(var(--wh) 6% 60%);
+    --w-div: hsl(var(--wh) var(--wsat) 30%);
+    --w-edge: hsl(var(--wh) var(--wsat) 26%);
+    --w-chip: hsl(var(--wh) var(--wsat) 19%);
+    --w-acc: hsl(calc(var(--wh) + 6) 80% 70%);
+    --w-spot: #f39a52;
+    --k: #8fa0ff; --t: #5cc8c0; --s: #f0a76b; --c: #7b8193; --n: #c49bf0; --f: #e3c46e;
+}
+@media (prefers-color-scheme: dark) {
+    .win:not(.l) {
+        --w-title: hsl(var(--wh) var(--wsat) 15%);
+        --w-strip: hsl(var(--wh) var(--wsat) 15%);
+        --w-page: hsl(var(--wh) var(--wsat) 10.5%);
+        --w-ink: hsl(var(--wh) 10% 90%);
+        --w-muted: hsl(var(--wh) 6% 60%);
+        --w-div: hsl(var(--wh) var(--wsat) 30%);
+        --w-edge: hsl(var(--wh) var(--wsat) 26%);
+        --w-chip: hsl(var(--wh) var(--wsat) 19%);
+        --w-acc: hsl(calc(var(--wh) + 6) 80% 70%);
+        --w-spot: #f39a52;
+        --k: #8fa0ff; --t: #5cc8c0; --s: #f0a76b; --c: #7b8193; --n: #c49bf0; --f: #e3c46e;
+    }
+}
+.w-title { display: flex; align-items: center; gap: .55em; padding: .5em .8em; background: var(--w-title); flex: none; }
+.w-title img { width: 1.45em; height: 1.45em; }
+.w-title .wm .s { color: var(--w-muted); }
+.w-title .wm .c { color: var(--w-spot); }
+.w-ctl { margin-left: auto; display: flex; gap: 1.3em; color: var(--w-muted); font-size: .95em; }
+.w-body { flex: 1; display: flex; min-height: 0; }
+.w-strip { width: 13.5em; flex: none; background: var(--w-strip); padding-top: .35em; overflow: hidden; }
+.w-tab { padding: .75em 1.7em; line-height: 1.2; white-space: nowrap; }
+.w-tab small { display: block; font-size: .8em; color: var(--w-muted); margin-top: .15em; }
+.w-tab.sel { background: var(--w-page); margin-left: .45em; padding-left: 1.25em; border-radius: .35em 0 0 .35em; }
+.w-div { height: 1px; background: var(--w-div); margin: .4em 1.2em; }
+.w-page { flex: 1; min-width: 0; padding: 1em 1.4em; overflow: hidden; display: flex; flex-direction: column; gap: .8em; position: relative; }
+.w-bar { display: flex; gap: .6em; align-items: center; flex: none; }
+.w-bar .r { margin-left: auto; }
+.w-chip { background: var(--w-chip); border-radius: .3em; padding: .25em .75em; white-space: nowrap; }
+.w-chip::after { content: " \25BE"; color: var(--w-muted); }
+.w-mut { color: var(--w-muted); }
+.w-mono { font-family: var(--mono); font-size: .95em; white-space: pre; line-height: 1.55; }
+.w-mono .k { color: var(--k); }
+.w-mono .t { color: var(--t); }
+.w-mono .s { color: var(--s); }
+.w-mono .c { color: var(--c); }
+.w-mono .n { color: var(--n); }
+.w-mono .f { color: var(--f); }
+.w-scripts { display: grid; grid-template-columns: auto 1fr; gap: .35em 1.2em; font-size: 1.12em; white-space: nowrap; }
+.w-scripts span:nth-child(odd) { color: var(--w-muted); font-size: .8em; align-self: center; }
+.w-pic {
+    flex: 1; border-radius: .3em; display: grid; place-items: center; position: relative; overflow: hidden;
+    background: repeating-conic-gradient(#cccccc 0 25%, #999999 0 50%) 0 0 / 1.4em 1.4em;
+}
+.w-pic img { height: 72%; aspect-ratio: 1; }
+.w-glass { position: absolute; border-radius: 50%; }
+.w-zoom {
+    flex: 1; position: relative; border-radius: .3em; overflow: hidden;
+    background: url("../img/icon-64.png") -51em -21em / 96em 96em no-repeat, var(--w-chip);
+    image-rendering: pixelated;
+}
+.w-zoom::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, .14) 0 1px, transparent 1px 1.5em),
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, .14) 0 1px, transparent 1px 1.5em);
+}
+.w-zoom i { position: absolute; left: 24em; top: 10.5em; width: 1.5em; height: 1.5em; outline: .18em solid #fff; box-shadow: 0 0 0 .3em #1d1f27; }
+.w-slider { width: 9em; height: .25em; border-radius: 1em; background: var(--w-div); position: relative; }
+.w-slider::after {
+    content: ""; position: absolute; left: 68%; top: 50%; width: .9em; height: .9em; border-radius: 50%;
+    background: var(--w-acc); transform: translate(-50%, -50%);
+}
+.w-sw { width: 1.3em; height: 1.3em; border-radius: .25em; background: #4fa8d8; box-shadow: 0 0 0 1px var(--w-edge); }
+.w-menu {
+    position: absolute; top: 2.6em; left: 1.4em; min-width: 15em; padding: .3em 0;
+    background: var(--w-page); border-radius: .35em;
+    box-shadow: 0 0 0 1px var(--w-edge), 0 .5em 1.5em rgba(0, 0, 0, .22);
+}
+.w-menu div { padding: .35em 1em; }
+.w-menu .on { background: var(--w-acc); color: #fff; }
+.w-big { font-size: 1.25em; }
+.w-tag {
+    position: absolute; z-index: 3; padding: 4px 7px; border-radius: 5px;
+    font: 600 11px/1 "Segoe UI", system-ui, sans-serif; background: var(--accent); color: var(--accent-ink);
+}
+.w-label {
+    position: absolute; right: 8px; bottom: 8px; z-index: 4; padding: 5px 8px; border-radius: 5px; pointer-events: none;
+    font: 600 10px/1 "Segoe UI", system-ui, sans-serif; letter-spacing: .05em; text-transform: uppercase;
+    background: rgba(13, 14, 18, .62); color: #fff;
+}

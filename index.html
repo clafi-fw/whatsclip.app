@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WhatsClip - see what is on your clipboard</title>
+    <meta name="description" content="WhatsClip shows the clipboard format by format and follows it as it changes. Free and open source, for Windows and Linux.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://whatsclip.app/">
+    <meta property="og:title" content="WhatsClip - see what is on your clipboard">
+    <meta property="og:description" content="Shows the clipboard format by format and follows it as it changes. A format reads as a picture, as text in a chosen encoding, or as raw bytes.">
+    <meta property="og:image" content="https://whatsclip.app/img/icon-256.png">
+    <meta name="theme-color" content="#f6f7fa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121318" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="img/icon-256.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/site.css">
+    <link rel="stylesheet" href="assets/illustrations.css">
+</head>
+<body>
+<div class="wrap">
+    <header class="head">
+        <a class="brand" href="./"><img src="img/icon-256.png" alt=""><span class="wm">What<span class="s">s</span><span class="c">Clip</span></span></a>
+        <nav class="nav">
+            <a href="#download">Download</a>
+            <a href="install.html">Install guide</a>
+            <a class="wide" href="install.html#sources">Sources</a>
+            <a class="wide" href="https://github.com/clafi-fw/cpp">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div>
+                <h1>See what is on your clipboard.</h1>
+                <p class="lede">WhatsClip shows the clipboard format by format and follows it as it changes. A format reads as a picture, as text in a chosen encoding, or as raw bytes.</p>
+            </div>
+            <div>
+                <div class="btns">
+                    <a class="btn primary" data-asset="windows" href="https://github.com/clafi-fw/cpp/releases/download/WhatsClip-v0.1.0/WhatsClip-0.1.0-windows-x64.zip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+                        <span>Download for Windows<small>10 and 11, x64 - zip</small></span>
+                    </a>
+                    <a class="btn secondary" data-asset="linux" href="https://github.com/clafi-fw/cpp/releases/download/WhatsClip-v0.1.0/WhatsClip-0.1.0-linux-x86_64.tar.gz">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+                        <span>Download for Linux<small>Wayland, x86-64 - tar.gz</small></span>
+                    </a>
+                </div>
+                <p class="fine">Version <span data-version>0.1.0</span> - free, zlib licence. Unpack and run; settings stay on your PC only when you allow it.</p>
+            </div>
+        </div>
+
+        <div class="fb">
+            <nav class="fb-strip" role="tablist" aria-label="What WhatsClip does">
+                <a role="tab" href="#dark-mode"><b>Dark mode</b><span>Light, dark, or as the system says</span></a>
+                <a role="tab" href="#any-scale"><b>Any scale</b><span>To the size that suits you</span></a>
+                <a role="tab" href="#themes"><b>ClaFi themes</b><span>Wears the theme you choose</span></a>
+                <hr>
+                <a role="tab" href="#as-text"><b>Every format as text</b><span>In the encoding you choose</span></a>
+                <a role="tab" href="#syntax"><b>Syntax highlighting</b><span>For the common languages</span></a>
+                <a role="tab" href="#exotic-languages"><b>Exotic languages</b><span>Shaped and drawn right</span></a>
+                <a role="tab" href="#code-pages"><b>Code pages<span class="badge">Windows</span></b><span>Pick one when the guess misses</span></a>
+                <hr>
+                <a role="tab" href="#picture-and-text"><b>Picture and text</b><span>Both previews, when both are there</span></a>
+                <a role="tab" href="#pixels"><b>Pixel by pixel</b><span>Zoom in and read any pixel</span></a>
+                <a role="tab" href="#alpha-channel"><b>Alpha channel</b><span>Transparency read right</span></a>
+            </nav>
+
+            <div class="fb-stage">
+                <section class="panel" id="dark-mode" role="tabpanel">
+                    <div class="scene pair" data-illustration="dark"></div>
+                    <p><b>Dark mode.</b> WhatsClip comes in light and dark. It follows the system until you pick one in Settings.</p>
+                </section>
+                <section class="panel" id="any-scale" role="tabpanel">
+                    <div class="scene scale" data-illustration="scale"></div>
+                    <p><b>Any scale.</b> Scale the interface as you wish - text, icons and spacing grow together.</p>
+                </section>
+                <section class="panel" id="themes" role="tabpanel">
+                    <div class="scene trio" data-illustration="themes"></div>
+                    <p><b>ClaFi themes.</b> WhatsClip wears any ClaFi theme. Make your own in <a data-themes href="https://github.com/clafi-fw/cpp/releases/tag/Themes-v0.1.0">Themes</a>.</p>
+                </section>
+                <section class="panel" id="as-text" role="tabpanel">
+                    <div class="scene" data-illustration="astext"></div>
+                    <p><b>Every format as text.</b> Any format on the clipboard can be read as text, in the encoding you choose - HTML fragments, RTF, the private formats of other applications.</p>
+                </section>
+                <section class="panel" id="syntax" role="tabpanel">
+                    <div class="scene" data-illustration="syntax"></div>
+                    <p><b>Syntax highlighting.</b> Code copied from an editor is coloured. The language is detected, and you can pick another.</p>
+                </section>
+                <section class="panel" id="exotic-languages" role="tabpanel">
+                    <div class="scene" data-illustration="exotic"></div>
+                    <p><b>Exotic languages.</b> However exotic the language is, its text is shaped and drawn the way it is written.</p>
+                </section>
+                <section class="panel" id="code-pages" role="tabpanel">
+                    <div class="scene" data-illustration="codepage"></div>
+                    <p><b>Code pages.</b> When the text's code page is not detected, choose it from the list. Windows only.</p>
+                </section>
+                <section class="panel" id="picture-and-text" role="tabpanel">
+                    <div class="scene" data-illustration="both"></div>
+                    <p><b>Picture and text.</b> Copy a picture together with its text and WhatsClip previews both - the picture and the text, a tab each.</p>
+                </section>
+                <section class="panel" id="pixels" role="tabpanel">
+                    <div class="scene" data-illustration="pixels"></div>
+                    <p><b>Pixel by pixel.</b> Zoom into a picture and point at a pixel to read its colour - as RGB hex, BGR hex, RGB decimal or CSS.</p>
+                </section>
+                <section class="panel" id="alpha-channel" role="tabpanel">
+                    <div class="scene" data-illustration="alpha"></div>
+                    <p><b>Alpha channel.</b> Pictures with an alpha channel keep their transparency.</p>
+                </section>
+            </div>
+        </div>
+
+        <section id="download">
+            <div class="downloads">
+                <div class="dlcard">
+                    <h2>Windows</h2>
+                    <p class="req">Windows 10 and 11, 64-bit.</p>
+                    <a class="btn primary" data-asset="windows" href="https://github.com/clafi-fw/cpp/releases/download/WhatsClip-v0.1.0/WhatsClip-0.1.0-windows-x64.zip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+                        <span>Download<small><span data-asset-name="windows">WhatsClip-0.1.0-windows-x64.zip</span> <span data-asset-size="windows"></span></small></span>
+                    </a>
+                </div>
+                <div class="dlcard">
+                    <h2>Linux</h2>
+                    <p class="req">A Wayland session, glibc 2.35 or newer, x86-64 with AVX2 and FMA. <a href="https://github.com/clafi-fw/cpp/blob/main/.github/release/Supported-Distros.md">Supported distributions</a></p>
+                    <a class="btn secondary" data-asset="linux" href="https://github.com/clafi-fw/cpp/releases/download/WhatsClip-v0.1.0/WhatsClip-0.1.0-linux-x86_64.tar.gz">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+                        <span>Download<small><span data-asset-name="linux">WhatsClip-0.1.0-linux-x86_64.tar.gz</span> <span data-asset-size="linux"></span></small></span>
+                    </a>
+                </div>
+            </div>
+            <p class="fine">Version <span data-version>0.1.0</span>, released <span data-date>2 October 2026</span> - <a data-release-page href="https://github.com/clafi-fw/cpp/releases/tag/WhatsClip-v0.1.0">release notes</a> - <a href="install.html#check">check the download</a></p>
+        </section>
+    </main>
+</div>
+
+<footer class="foot">
+    <div class="wrap">
+        <span><span class="wm">What<span class="s">s</span><span class="c">Clip</span></span> <span data-version>0.1.0</span></span>
+        <span class="grow"></span>
+        <span>Built with <a href="https://github.com/clafi-fw/cpp">ClaFi - Clarity First the Framework</a></span>
+        <a href="https://github.com/clafi-fw/cpp/blob/main/LICENSE">zlib licence</a>
+        <span>&copy; 2026 Oleg Zhukov</span>
+    </div>
+</footer>
+
+<script src="assets/illustrations.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

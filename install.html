@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Install guide - WhatsClip</title>
+    <meta name="description" content="How to run WhatsClip on Windows and Linux, check the download, and keep its settings on your PC.">
+    <meta name="theme-color" content="#f6f7fa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121318" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="img/icon-256.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+    <header class="head">
+        <a class="brand" href="./"><img src="img/icon-256.png" alt=""><span class="wm">What<span class="s">s</span><span class="c">Clip</span></span></a>
+        <nav class="nav">
+            <a href="./#download">Download</a>
+            <a href="install.html" aria-current="page">Install guide</a>
+            <a class="wide" href="#sources">Sources</a>
+            <a class="wide" href="https://github.com/clafi-fw/cpp">GitHub</a>
+        </nav>
+    </header>
+
+    <div class="doc">
+        <nav class="toc" aria-label="On this page">
+            <a href="#windows">Windows</a>
+            <a href="#linux">Linux</a>
+            <a href="#check">Check the download</a>
+            <a href="#settings">Storing settings on this PC</a>
+            <a href="#remove">Removing WhatsClip</a>
+            <a href="#sources">Sources</a>
+        </nav>
+
+        <main class="prose">
+            <h1>Install guide</h1>
+            <p>WhatsClip is a single program in an archive. Unpack it anywhere and run it - a folder in your documents, a tools folder, a USB stick.</p>
+
+            <h2 id="windows">Windows</h2>
+            <p>Windows 10 or 11, 64-bit.</p>
+            <ol>
+                <li>Download <a data-asset="windows" href="https://github.com/clafi-fw/cpp/releases/download/WhatsClip-v0.1.0/WhatsClip-0.1.0-windows-x64.zip"><code data-asset-name="windows">WhatsClip-0.1.0-windows-x64.zip</code></a>.</li>
+                <li>Unpack it and run <code>WhatsClip.exe</code>.</li>
+            </ol>
+            <p>The executable carries no code signature yet, so Windows may open it with <i>Windows protected your PC</i>. Choose <b>More info</b>, then <b>Run anyway</b>. To be sure the file is the one that was published, <a href="#check">check the download</a> first.</p>
+
+            <h2 id="linux">Linux</h2>
+            <p>A Wayland session, glibc 2.35 or newer, and an x86-64 processor with AVX2 and FMA - every desktop distribution from spring 2022 on. <a href="https://github.com/clafi-fw/cpp/blob/main/.github/release/Supported-Distros.md">Supported distributions</a> lists the desktops and what each one offers.</p>
+            <pre><code>tar -xzf <span data-asset-name="linux">WhatsClip-0.1.0-linux-x86_64.tar.gz</span>
+./WhatsClip/WhatsClip</code></pre>
+            <p>When it does not start, the archive carries a checker that names what the machine is missing and how to install it:</p>
+            <pre><code>./WhatsClip/clafi-check.sh ./WhatsClip/WhatsClip</code></pre>
+
+            <h2 id="check">Check the download</h2>
+            <p>GitHub computes a SHA-256 checksum of every file when a release is published and shows it on the <a data-release-page href="https://github.com/clafi-fw/cpp/releases/tag/WhatsClip-v0.1.0">release page</a>, next to the file. For version <span data-version>0.1.0</span>:</p>
+            <div class="table">
+                <span data-asset-name="windows">WhatsClip-0.1.0-windows-x64.zip</span>
+                <span data-asset-digest="windows"><a data-release-page href="https://github.com/clafi-fw/cpp/releases/tag/WhatsClip-v0.1.0">on the release page</a></span>
+                <span data-asset-name="linux">WhatsClip-0.1.0-linux-x86_64.tar.gz</span>
+                <span data-asset-digest="linux"><a data-release-page href="https://github.com/clafi-fw/cpp/releases/tag/WhatsClip-v0.1.0">on the release page</a></span>
+            </div>
+            <p>Compute the checksum of the file you downloaded, in the folder it was saved to, and compare the two.</p>
+            <span class="label">Windows, in PowerShell</span>
+            <pre><code>Get-FileHash <span data-asset-name="windows">WhatsClip-0.1.0-windows-x64.zip</span></code></pre>
+            <span class="label">Linux</span>
+            <pre><code>sha256sum <span data-asset-name="linux">WhatsClip-0.1.0-linux-x86_64.tar.gz</span></code></pre>
+            <p>Equal checksums mean your file is the one GitHub holds, byte for byte - PowerShell prints the letters in capitals, which changes nothing. The checksum belongs to the archive, so check it before you unpack.</p>
+
+            <h2 id="settings">Storing settings on this PC</h2>
+            <p>WhatsClip starts with its defaults and writes nothing to your PC. Whatever you change lasts until it closes.</p>
+            <p>To keep your settings from one run to the next, open the application menu, go to <b>Settings</b> and tick <b>Keep settings on this PC</b>. WhatsClip names the folder it is about to create and asks first:</p>
+            <div class="table">
+                <span>Windows</span><span><code>%APPDATA%\ClaFi Framework\WhatsClip</code></span>
+                <span>Linux</span><span><code>~/.config/ClaFi Framework/WhatsClip</code>, or under <code>$XDG_CONFIG_HOME</code> where it is set</span>
+            </div>
+
+            <h2 id="remove">Removing WhatsClip</h2>
+            <p>Untick <b>Keep settings on this PC</b> first. WhatsClip asks, then deletes its settings folder. Then delete the folder you unpacked.</p>
+
+            <h2 id="sources">Sources</h2>
+            <p>WhatsClip is open source under the zlib licence. It is one of the applications of the ClaFi framework, and its code is in the framework's repository, in <a href="https://github.com/clafi-fw/cpp/tree/main/Tools/WhatsClip">Tools/WhatsClip</a>. GitHub builds every release from that tree - the recipe is <a href="https://github.com/clafi-fw/cpp/blob/main/.github/workflows/release.yml">.github/workflows/release.yml</a>.</p>
+        </main>
+    </div>
+</div>
+
+<footer class="foot">
+    <div class="wrap">
+        <span><span class="wm">What<span class="s">s</span><span class="c">Clip</span></span> <span data-version>0.1.0</span></span>
+        <span class="grow"></span>
+        <span>Built with <a href="https://github.com/clafi-fw/cpp">ClaFi - Clarity First the Framework</a></span>
+        <a href="https://github.com/clafi-fw/cpp/blob/main/LICENSE">zlib licence</a>
+        <span>&copy; 2026 Oleg Zhukov</span>
+    </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
