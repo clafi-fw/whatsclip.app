@@ -17,7 +17,7 @@ A new WhatsClip release needs no change here.
 ## Publishing
 
 1. Settings - Pages: deploy from a branch, `main`, folder `/ (root)`.
-2. The domain, at the registrar - the apex points at GitHub Pages, `www` at the organisation:
+2. The domain, at the registrar - the apex points at GitHub Pages, `www` at the account's Pages host:
 
    | Type  | Name  | Value |
    |-------|-------|-------|
@@ -31,7 +31,8 @@ A new WhatsClip release needs no change here.
    | AAAA  | @     | 2606:50c0:8003::153 |
    | CNAME | www   | clafi-fw.github.io |
 
-3. The organisation's Settings - Pages: verify `whatsclip.app`, so no other repository can claim it.
+3. The account's Settings - Pages (github.com/settings/pages): verify `whatsclip.app`, so no other
+   account can claim it.
 4. Once the certificate is issued, tick Enforce HTTPS. A `.app` domain is reachable over HTTPS only.
 
 ## Trying it locally
