@@ -54,7 +54,6 @@ Several windows in one scene - the layout class places them in order:
 | `as-text` | single | a private or HTML format read as text, its encoding shown |
 | `syntax` | single | code copied from an editor, coloured, the language picker in view |
 | `exotic-languages` | single | text in several scripts - Arabic, Devanagari, Thai, CJK |
-| `code-pages` | single | CF_TEXT with the code page list open (Windows) |
 | `picture-and-text` | single | a clipboard holding both - the two preview tabs at the top of the strip |
 | `pixels` | single | a picture zoomed in, one pixel picked, its colour read out |
 | `alpha-channel` | single | a translucent picture over the checkerboard |

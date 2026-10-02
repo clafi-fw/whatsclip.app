@@ -100,14 +100,6 @@
     background: var(--w-acc); transform: translate(-50%, -50%);
 }
 .w-sw { width: 1.3em; height: 1.3em; border-radius: .25em; background: #4fa8d8; box-shadow: 0 0 0 1px var(--w-edge); }
-.w-menu {
-    position: absolute; top: 2.6em; left: 1.4em; min-width: 15em; padding: .3em 0;
-    background: var(--w-page); border-radius: .35em;
-    box-shadow: 0 0 0 1px var(--w-edge), 0 .5em 1.5em rgba(0, 0, 0, .22);
-}
-.w-menu div { padding: .35em 1em; }
-.w-menu .on { background: var(--w-acc); color: #fff; }
-.w-big { font-size: 1.25em; }
 .w-tag {
     position: absolute; z-index: 3; padding: 4px 7px; border-radius: 5px;
     font: 600 11px/1 "Segoe UI", system-ui, sans-serif; background: var(--accent); color: var(--accent-ink);

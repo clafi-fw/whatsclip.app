@@ -8,7 +8,6 @@
     const stripCode = [["Text", "from CF_UNICODETEXT"], 0, ["CF_UNICODETEXT"], ["Rich Text Format"], ["HTML Format"], ["CF_TEXT", "synthesized"], ["CF_LOCALE", "synthesized"]];
     const stripBoth = [["Picture", "from PNG"], ["Text", "from CF_UNICODETEXT"], 0, ["PNG"], ["HTML Format"], ["CF_UNICODETEXT"], ["CF_DIBV5"], ["CF_DIB", "synthesized"], ["CF_BITMAP", "synthesized"]];
     const stripPicture = [["Picture", "from PNG"], 0, ["PNG"], ["CF_DIBV5"], ["CF_DIB", "synthesized"], ["CF_BITMAP", "synthesized"]];
-    const stripAnsi = [["Text", "from CF_TEXT"], 0, ["CF_TEXT"], ["CF_LOCALE"]];
 
     const code = `<span class="k">module</span> ClaFi.Tools.WhatsClip.Main;
 
@@ -62,11 +61,6 @@ format by format.&lt;/p&gt;&lt;!--EndFragment--&gt;
              <div class="w-mono">${htmlFormat}</div>`],
         exotic: [stripText, 0, () =>
             `<div class="w-scripts">${scripts.map(s => `<span>${s[0]}</span><span>${s[1]}</span>`).join("")}</div>`],
-        codepage: [stripAnsi, 2, () =>
-            `<div class="w-bar"><span class="w-chip">1251 - Cyrillic</span><span class="r w-mut">CF_TEXT, 58 bytes</span></div>
-             <div class="w-big" style="margin-top:1.2em">Съешь же ещё этих мягких французских булок, да выпей чаю.</div>
-             <div class="w-menu"><div>1250 - Central European</div><div class="on">1251 - Cyrillic</div><div>1252 - Western</div>
-             <div>1253 - Greek</div><div>1254 - Turkish</div><div>866 - DOS Cyrillic</div></div>`],
         both: [stripBoth, 0, () =>
             `<div class="w-pic"><img src="${icon}" alt=""></div>`],
         pixels: [stripBoth, 0, () =>
