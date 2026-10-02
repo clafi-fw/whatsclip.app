@@ -31,6 +31,9 @@ A new WhatsClip release needs no change here.
    | AAAA  | @     | 2606:50c0:8003::153 |
    | CNAME | www   | clafi-fw.github.io |
 
+   The domain is registered at Cloudflare, so the records live in its DNS. Each one is set to
+   DNS only (grey cloud) - through Cloudflare's proxy GitHub cannot issue the certificate.
+
 3. The account's Settings - Pages (github.com/settings/pages): verify `whatsclip.app`, so no other
    account can claim it.
 4. Once the certificate is issued, tick Enforce HTTPS. A `.app` domain is reachable over HTTPS only.
