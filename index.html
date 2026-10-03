@@ -16,7 +16,6 @@
     <link rel="icon" href="img/icon-256.png" type="image/png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="stylesheet" href="assets/site.css">
-    <link rel="stylesheet" href="assets/illustrations.css">
 </head>
 <body>
 <div class="wrap">
@@ -70,47 +69,69 @@
             <div class="fb-stage">
                 <section class="panel" id="dark-mode" role="tabpanel">
                     <header class="panel-head"><h2>Dark mode</h2><span>Light, dark, or as the system says</span></header>
-                    <div class="scene pair" data-illustration="dark"></div>
+                    <div class="scene pair">
+                        <img src="shots/dark-mode-light.png" alt="WhatsClip in light, previewing C++ code">
+                        <img src="shots/dark-mode-dark.png" alt="The same clipboard in dark">
+                    </div>
                     <p>WhatsClip comes in light and dark. It follows the system until you pick one in Settings.</p>
                 </section>
                 <section class="panel" id="any-scale" role="tabpanel">
                     <header class="panel-head"><h2>Any scale</h2><span>To the size that suits you</span></header>
-                    <div class="scene scale" data-illustration="scale"></div>
+                    <div class="scene scale">
+                        <img src="shots/any-scale-small.png" alt="WhatsClip at a small scale, an HTML format shown as bytes" loading="lazy">
+                        <img src="shots/any-scale-large.png" alt="The same window at a large scale" loading="lazy">
+                    </div>
                     <p>Scale the interface as you wish - text, icons and spacing grow together.</p>
                 </section>
                 <section class="panel" id="themes" role="tabpanel">
                     <header class="panel-head"><h2>ClaFi themes</h2><span>Wears the theme you choose</span></header>
-                    <div class="scene trio" data-illustration="themes"></div>
+                    <div class="scene trio">
+                        <img src="shots/themes-1.png" alt="A picture preview in one ClaFi theme" loading="lazy">
+                        <img src="shots/themes-2.png" alt="The same in another theme" loading="lazy">
+                        <img src="shots/themes-3.png" alt="And in a third" loading="lazy">
+                    </div>
                     <p>WhatsClip wears any ClaFi theme. Make your own in <a data-themes href="https://github.com/clafi-fw/cpp/releases/tag/Themes-v0.1.0">Themes</a>.</p>
                 </section>
                 <section class="panel" id="as-text" role="tabpanel">
                     <header class="panel-head"><h2>Every format as text</h2><span>In the encoding you choose</span></header>
-                    <div class="scene" data-illustration="astext"></div>
+                    <div class="scene">
+                        <img src="shots/as-text.png" alt="A list of copied files read as UTF-16 text" loading="lazy">
+                    </div>
                     <p>Any format on the clipboard can be read as text, in the encoding you choose - HTML fragments, RTF, the private formats of other applications.</p>
                 </section>
                 <section class="panel" id="syntax" role="tabpanel">
                     <header class="panel-head"><h2>Syntax highlighting</h2><span>For the common languages</span></header>
-                    <div class="scene" data-illustration="syntax"></div>
+                    <div class="scene">
+                        <img src="shots/syntax.png" alt="C++ copied from an editor, coloured, the language picker set to C++" loading="lazy">
+                    </div>
                     <p>Code copied from an editor is coloured. The language is detected, and you can pick another.</p>
                 </section>
                 <section class="panel" id="exotic-languages" role="tabpanel">
                     <header class="panel-head"><h2>Exotic languages</h2><span>Shaped and drawn right</span></header>
-                    <div class="scene" data-illustration="exotic"></div>
+                    <div class="scene">
+                        <img src="shots/exotic-languages.png" alt="Text in Russian, Greek, Arabic, Hebrew, Hindi, Thai, Georgian, Japanese and Korean" loading="lazy">
+                    </div>
                     <p>However exotic the language is, its text is shaped and drawn the way it is written.</p>
                 </section>
                 <section class="panel" id="picture-and-text" role="tabpanel">
                     <header class="panel-head"><h2>Picture and text</h2><span>Both previews, when both are there</span></header>
-                    <div class="scene" data-illustration="both"></div>
+                    <div class="scene">
+                        <img src="shots/picture-and-text.png" alt="A copy from a spreadsheet, previewed as a picture and as text" loading="lazy">
+                    </div>
                     <p>Copy a picture together with its text and WhatsClip previews both - the picture and the text, a tab each.</p>
                 </section>
                 <section class="panel" id="pixels" role="tabpanel">
                     <header class="panel-head"><h2>Pixel by pixel</h2><span>Zoom in and read any pixel</span></header>
-                    <div class="scene" data-illustration="pixels"></div>
+                    <div class="scene">
+                        <img src="shots/pixels.png" alt="A picture zoomed in to single pixels, the colour under the cursor read out" loading="lazy">
+                    </div>
                     <p>Zoom into a picture and point at a pixel to read its colour - as RGB hex, BGR hex, RGB decimal or CSS.</p>
                 </section>
                 <section class="panel" id="alpha-channel" role="tabpanel">
                     <header class="panel-head"><h2>Alpha channel</h2><span>Transparency read right</span></header>
-                    <div class="scene" data-illustration="alpha"></div>
+                    <div class="scene">
+                        <img src="shots/alpha-channel.png" alt="A translucent picture over the checkerboard" loading="lazy">
+                    </div>
                     <p>Pictures with an alpha channel keep their transparency.</p>
                 </section>
             </div>
@@ -150,7 +171,6 @@
     </div>
 </footer>
 
-<script src="assets/illustrations.js"></script>
 <script src="assets/site.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # Screenshots
 
-Each panel of the start page shows a drawn illustration until its screenshots are here. A panel
-takes real images by replacing its `data-illustration` element in `index.html`.
+The windows the panels of the start page show. A new shot replaces the file of the same name;
+[The files](#the-files) says which panel shows which.
 
 ## Taking them
 
@@ -49,7 +49,7 @@ Several windows in one scene - the layout class places them in order:
 | Panel | Layout | What the window shows |
 |-------|--------|-----------------------|
 | `dark-mode` | `pair` | the same clipboard in light and in dark |
-| `any-scale` | `scale` | the same clipboard at 87% and at 150% |
+| `any-scale` | `scale` | the same clipboard at a small and at a large scale |
 | `themes` | `trio` | three different ClaFi themes |
 | `as-text` | single | a private or HTML format read as text, its encoding shown |
 | `syntax` | single | code copied from an editor, coloured, the language picker in view |
@@ -58,5 +58,19 @@ Several windows in one scene - the layout class places them in order:
 | `pixels` | single | a picture zoomed in, one pixel picked, its colour read out |
 | `alpha-channel` | single | a translucent picture over the checkerboard |
 
-When every panel has its screenshots, `assets/illustrations.js` and `assets/illustrations.css`
-have nothing left to draw, and both lines that load them in `index.html` can go.
+## The files
+
+| File | Panel |
+|------|-------|
+| `dark-mode-light.png`, `dark-mode-dark.png` | `dark-mode` |
+| `any-scale-small.png`, `any-scale-large.png` | `any-scale` |
+| `themes-1.png`, `themes-2.png`, `themes-3.png` | `themes`, back to front |
+| `as-text.png` | `as-text` |
+| `syntax.png` | `syntax` |
+| `exotic-languages.png` | `exotic-languages` |
+| `picture-and-text.png` | `picture-and-text` |
+| `pixels.png` | `pixels` |
+| `alpha-channel.png` | `alpha-channel` |
+
+Images outside the first panel carry `loading="lazy"`, so a visitor fetches a panel's windows when
+it is opened.
