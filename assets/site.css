@@ -87,7 +87,7 @@ h1 { font-size: 44px; line-height: 1.12; letter-spacing: -.02em; margin: 0 0 16p
 
 /* ---------- home: the feature browser, shaped like the app's format strip ---------- */
 .fb {
-    display: grid; grid-template-columns: 272px 1fr;
+    display: grid; grid-template-columns: 224px 1fr;
     background: var(--surface2); border: 1px solid var(--line); border-radius: 16px;
     overflow: hidden; box-shadow: var(--shadow);
 }
@@ -98,7 +98,7 @@ h1 { font-size: 44px; line-height: 1.12; letter-spacing: -.02em; margin: 0 0 16p
 }
 .fb-group:first-child { margin-top: 12px; }
 .fb-strip a {
-    display: block; margin-left: 10px; padding: 8px 18px;
+    display: block; margin-left: 10px; padding: 12px 18px;
     border-radius: 10px 0 0 10px; line-height: 1.25; color: var(--ink); font-weight: 500;
 }
 .fb-strip a:hover { text-decoration: none; background: color-mix(in srgb, var(--surface) 50%, transparent); }
@@ -173,9 +173,7 @@ h1 { font-size: 44px; line-height: 1.12; letter-spacing: -.02em; margin: 0 0 16p
     h1, .hero h1 { font-size: 34px; }
     .hero, .doc { grid-template-columns: 1fr; gap: 26px; }
     .hero .btns { flex-direction: row; }
-    .fb { grid-template-columns: 220px 1fr; }
-    .fb-strip a { padding: 7px 14px; }
-    .fb-group { padding: 0 24px; }
+    .fb-strip a { padding: 8px 18px; }
     .fb-stage { padding: 20px; }
     .downloads { grid-template-columns: 1fr; }
     .toc { position: static; }
